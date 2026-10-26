@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Today</h1>
+      <p id="count" aria-live="polite">0 tasks left</p>
+    </header>
+
+    <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+
+    <form id="form" autocomplete="off">
+      <input id="input" type="text" placeholder="What needs doing?" aria-label="New task" required>
+      <button type="submit">Add task</button>
+    </form>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="done">Done</button>
+    </nav>
+
+    <ul id="list"></ul>
+    <p id="empty" class="empty">Nothing here yet. Add your first task above.</p>
+
+    <button id="clear" class="clear" hidden>Clear completed</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
